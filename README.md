@@ -4,7 +4,7 @@
 Simple tools that I used to generate and run a model with VPilot and DeepGTAV.
 
 ## Requirements
-DeepGTAV must be installed and VPilot must be in the same folder. 
+[DeepGTAV](https://github.com/ai-tor/DeepGTAV) must be installed and [VPilot](https://github.com/cpgeier/VPilot) must be in the same folder. 
 
 
 - dataset.py - Uses in-game AI to drive car. Captures screen and saves driving variables in a pickle file
