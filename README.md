@@ -4,7 +4,11 @@
 Simple tools that I used to generate and run a model with VPilot and DeepGTAV.
 
 ## Requirements
-[DeepGTAV](https://github.com/ai-tor/DeepGTAV) must be installed and [VPilot](https://github.com/cpgeier/VPilot) must be in the same folder. 
+1. [DeepGTAV](https://github.com/ai-tor/DeepGTAV) must be installed and [VPilot](https://github.com/cpgeier/VPilot) must be in the same folder.
+
+2. Keras, Tensorflow, Numpy, h5py
+
+2. A GPU with equal to or more than 6 Gigabytes of VRAM. A 980TI is barely able to run the program
 
 ## Files
 
@@ -18,4 +22,8 @@ Simple tools that I used to generate and run a model with VPilot and DeepGTAV.
 
 ## Model description
 
-The Xception V1 model is used to classify different images to different positions of the steering wheel. The steering position is collected as a float between -1 and 1, so I convert it to a positive integer between 0 and 999. This was then simply converted to a one-hot vector for input into the model. This preserves the overall structure of the Xception V1 model because the Imagenet dataset that it was designed for included 1000 classes of images. I tried to use the Xception model for regression, but did not have as good of results. During driving, the model is sent the images and returns a vector which is converted into a value between -1 and 1 to be sent to DeepGTAV for input into the game.
+The Xception V1 model is used to classify different images to different positions of the steering wheel. The steering position is collected as a float between -1 and 1, so I converted it to a positive integer between 0 and 999. This was then simply converted to a one-hot vector for input into the model. This preserves the overall structure of the Xception V1 model because the Imagenet dataset that it was designed for included 1000 classes of images. I tried to use the Xception model for regression, but did not have as good of results. During driving, the model is sent the images and returns a vector which is converted into a value between -1 and 1 to be sent to DeepGTAV for input into the game. To clarify, the model only controls the steering of the car while I control the throttle on the keyboard.
+
+## Training
+
+The dataset I generated was around 66 gigabytes after running for 10 hours, so I would advise having plenty of space on a hard drive to store data. Also, I training the model on an AWS p2xlarge instance for around 12 hours, during that time I was only able to go through 1 epoch of the data. However, the model still yeilded great results in running and is able to avoid obstacles and stay between road lines most of the time.
