@@ -8,7 +8,7 @@ Simple tools that I used to generate and run a model with VPilot and DeepGTAV.
 
 2. Keras, Tensorflow, Numpy, h5py
 
-2. A GPU with equal to or more than 6 Gigabytes of VRAM. A 980TI is barely able to run the program
+2. A GPU with equal to or more than 6 Gigabytes of VRAM. A 980ti is barely able to run the program
 
 ## Files
 
