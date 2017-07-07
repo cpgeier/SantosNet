@@ -1,6 +1,6 @@
 <img src="/sample.gif?raw=true">
 
-# DeepGTAV_Tools
+# SantosNet
 Simple tools that I used to generate and run a model with VPilot and DeepGTAV.
 
 ## Requirements
