@@ -8,7 +8,7 @@ Simple tools that I used to generate and run a self-driving car model with VPilo
 
 2. Keras, Tensorflow, Numpy, h5py
 
-2. A GPU with equal to or more than 6 Gigabytes of VRAM. A 980ti is barely able to simultaneously run the model and the game.
+2. A GPU with 6 or more gigabytes of VRAM. A 980ti is barely able to simultaneously run the model and the game.
 
 ## Files
 
