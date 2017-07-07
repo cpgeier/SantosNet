@@ -1,7 +1,7 @@
 <img src="/sample.gif?raw=true">
 
 # SantosNet
-Simple tools that I used to generate and run a model with VPilot and DeepGTAV.
+Simple tools that I used to generate and run a self-driving car model with VPilot and DeepGTAV.
 
 ## Requirements
 1. [DeepGTAV](https://github.com/ai-tor/DeepGTAV) must be installed and [VPilot](https://github.com/cpgeier/VPilot) must be in the same folder.
