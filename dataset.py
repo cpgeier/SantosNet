@@ -2,7 +2,6 @@ from deepgtav.messages import Start, Stop, Config, Dataset, frame2numpy, Scenari
 from deepgtav.client import Client
 import argparse
 import time
-import cv2
 
 def reset():
 	''' Resets position of car to a specific location '''
