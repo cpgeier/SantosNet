@@ -27,3 +27,11 @@ The Xception V1 model is used to classify different images to different position
 ## Training
 
 The dataset I generated was around 66 gigabytes after running for 10 hours, so I would advise having plenty of space on a hard drive to store data. Also, I training the model on an AWS p2xlarge instance for around 12 hours, during that time I was only able to go through 1 epoch of the data. However, the model still yeilded great results in running and is able to avoid obstacles and stay between road lines most of the time.
+
+## Improvements
+
+If you would like to contribute I have some ideas on how this model could be improved:
+
+- Dataset balancing - Most of the steering values will be around 0, with few around -1 and 1, so balancing the dataset would probably improve performance
+- Fine tune with ImageNet initilization - I initialized with random weights, but its probably best to fine tune the model with pre-trained weights
+- Better preprocessing
