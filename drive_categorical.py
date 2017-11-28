@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 
 print("Loading Model...")
-model = load_model('model_trained_categorical.h5')
+model = load_model('sample_model.h5') # Load trained model
 print("Model Loaded. Compiling...")
 model.compile(optimizer='Adadelta', loss='mean_squared_error')
 
