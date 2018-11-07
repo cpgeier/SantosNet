@@ -20,6 +20,8 @@ Simple tools that I used to generate and run a self-driving car model with VPilo
 - preprocessing.py - Loads batches of frames from a pickled file to be used in training
 - sample.gif - Demonstration of the ability of a model generated using these programs
 
+Download a sample model [here](https://drive.google.com/file/d/1ai6qRoFwWkcAOYkNxqxzPIwiOeiuvKd-/view?usp=sharing)
+
 ## Model
 
 The Xception V1 model is used to classify different images to different positions of the steering wheel. The steering position is collected as a float between -1 and 1, so I converted it to a positive integer between 0 and 999. This was then simply converted to a one-hot vector for input into the model. This preserves the overall structure of the Xception V1 model because the Imagenet dataset that it was designed for included 1000 classes of images. I tried to use the Xception model for regression, but did not have as good of results. During driving, the model is sent the images and returns a vector which is converted into a value between -1 and 1 to be sent to DeepGTAV for input into the game. To clarify, the model only controls the steering of the car while I control the throttle on the keyboard.
